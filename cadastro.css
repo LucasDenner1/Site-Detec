@@ -1,0 +1,72 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background-color: #6F6E6E;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* */
+
+#cadastro-form {
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 28px;
+    background-color: #5E5E5E;
+}
+
+#titulo{
+    color: #fff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 65%;
+    padding: 10px;
+    background-color: #D9D9D9;
+    border: 1px solid #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    margin-left: 55px;
+    border-radius: 15px;
+}
+
+input[type="submit"] {
+    width: 70%;
+    background-color: #8BDE38;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 55px;
+    margin-bottom: 20px;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #79c42e;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
