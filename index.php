@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Confirmação do cadastro -->
     <?php
     session_start();
     if($_SESSION["GDS"]){
@@ -22,10 +23,7 @@
       background: '#585757',
 
     })
-    setTimeout(function() {
-    }, 5000); 
     </script>
-
   <style>
 
   .swal2-confirm.swal2-styled{
@@ -37,5 +35,16 @@
     }
     $_SESSION["GDS"] = "";
     ?>
+
+  <div class="background-image"></div>
+  <div class="container">
+    <h1 id="titulo">Login</h1>
+    <form id="login-form" method="post" action="comparar.php">
+      <input type="email" id="email" name="email" class="input" placeholder="Email" required>
+      <input type="password" id="senha" name="senha" class="input" placeholder="Senha" required>
+      <input type="submit" value="Entrar" class="button">
+    </form>
+  </div>
+
 </body>
 </html>
