@@ -27,7 +27,8 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
     }
     // Se a query SQL retornou algum resultado, redireciona o usuário para a página de administrativo.php
     else if(!empty($resultado)){
-        header("Location: administrativo.php");
+        header("Location: Home.php");
+        $_SESSION['intruso'] = "tá liberado";
     }
 
 }

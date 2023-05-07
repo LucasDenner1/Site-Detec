@@ -35,8 +35,12 @@
             <input type="password" id="senha" name="senha" class="input" placeholder="SENHA" required>
             <input type="password" id="confirmarsenha" name="confirmarsenha" class="input" placeholder="CONFIRMAR SENHA" required>
             <?php
+
+            if(isset($_SESSION["Conflito"])) {
                 echo"<div><spam class='error'>".$_SESSION["Conflito"]."</spam></div>";
-                $_SESSION["Conflito"] = "";
+                unset($_SESSION["Conflito"]);
+            }
+                
             ?>
             <input type="submit" value="CADASTRAR" class="button">
             <p id="vanc">Já é Cadastrado? Faça <a id= "ancora" href="index.php">Login</a>.</p>
