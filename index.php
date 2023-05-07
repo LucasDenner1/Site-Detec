@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+
 </head>
 <body>
     <!-- Confirmação do cadastro -->
@@ -37,12 +39,18 @@
     ?>
 
   <div class="background-image"></div>
+  <img class="logo" src="imagens/LOGO.png">
   <div class="container">
-    <h1 id="titulo">Login</h1>
     <form id="login-form" method="post" action="comparar.php">
-      <input type="email" id="email" name="email" class="input" placeholder="Email" required>
-      <input type="password" id="senha" name="senha" class="input" placeholder="Senha" required>
-      <input type="submit" value="Entrar" class="button">
+      <h1 id="titulo">LOGIN</h1>
+      <input type="email" id="email" name="email" class="input" placeholder="EMAIL" required>
+      <input type="password" id="senha" name="senha" class="input" placeholder="SENHA" required>
+      <?php
+                echo"<div><spam class='error'>".$_SESSION["loginErro"]."</spam></div>";
+                $_SESSION["loginErro"] = "";
+            ?>
+      <input type="submit" value="ENTRAR" class="button">
+      <p id="vanc">Não possui conta? <a id= "ancora" href="cadastro.php">Cadastre-se</a>.</p>
     </form>
   </div>
 

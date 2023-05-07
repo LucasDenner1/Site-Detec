@@ -22,7 +22,7 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
 
     // Verifica se a query SQL retornou algum resultado
     if(empty($resultado)){
-        $_SESSION['loginErro'] = "Usuário ou senha inválido";
+        $_SESSION['loginErro'] = "Usuário ou senha inválidos";
         header("Location: index.php");
     }
     // Se a query SQL retornou algum resultado, redireciona o usuário para a página de administrativo.php
