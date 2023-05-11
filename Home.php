@@ -49,8 +49,8 @@ if (empty($_SESSION['intruso'])) {
     }
     </script>
 
-    <div id="cont"class="cont"> <!--Div de adicionar algo -->
-    <img id="mais"src="./imagens/maism.png">
+    <div id="addPubli"class="containerPubli"> <!--Div de adicionar algo -->
+      <img id="mais"src="./imagens/maism.png">
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
