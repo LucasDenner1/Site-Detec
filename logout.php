@@ -5,4 +5,3 @@ session_destroy(); // Destrói a sessão
 
 header("Location: index.php"); // Redireciona o usuário para a página inicial
 exit(); // Encerra o script
-?>
