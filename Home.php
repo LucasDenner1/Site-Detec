@@ -49,7 +49,7 @@ if (empty($_SESSION['intruso'])) {
     }
     </script>
 
-    <div id="cont"class="cont">
+    <div id="cont"class="cont"> <!--Div de adicionar algo -->
     <img id="mais"src="./imagens/maism.png">
     </div>
 
