@@ -49,10 +49,9 @@ if (empty($_SESSION['intruso'])) {
     }
   </script>
 
-  <!--  Isso é a Div (container) -->
-  <div id="cont" class="cont">
-    <img id="mais" src="./imagens/maism.png">
-  </div>
+    <div id="addPubli"class="containerPubli"> <!--Div de adicionar algo  // iago-->
+      <img id="mais"src="./imagens/maism.png">
+    </div>
 
   <!-- Esse é o código que você terá que meter o pau -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
