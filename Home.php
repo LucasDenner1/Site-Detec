@@ -14,7 +14,7 @@ if (empty($_SESSION['intruso'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forum</title>
   <link rel="stylesheet" href="teste.css">
-  
+
 </head>
 
 <body>
@@ -47,13 +47,15 @@ if (empty($_SESSION['intruso'])) {
         menu.style.display = "none"
       }
     }
-    </script>
+  </script>
 
-    <div id="cont"class="cont">
-    <img id="mais"src="./imagens/maism.png">
-    </div>
+  <!--  Isso é a Div (container) -->
+  <div id="cont" class="cont">
+    <img id="mais" src="./imagens/maism.png">
+  </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Esse é o código que você terá que meter o pau -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -63,20 +65,21 @@ if (empty($_SESSION['intruso'])) {
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="modalForm" method="post" action="publicacao.php">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Titulo</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="recipient-name" name="titulo">
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Texto:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" id="message-text" name="texto"></textarea>
+          </div>
+          <input type="hidden" name="data_hora" value="<?php echo date('Y-m-d H:i:s'); ?>">
+          <div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
       </div>
     </div>
   </div>

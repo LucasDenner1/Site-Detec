@@ -28,7 +28,8 @@ if ((isset($_POST['email'])) && (isset($_POST['senha']))) {
     // Se a query SQL retornou algum resultado, redireciona o usuário para a página de administrativo.php
     else if (!empty($resultado)) {
         header("Location: Home.php");
-        $_SESSION['intruso'] = "tá liberado";
+        $_SESSION['intruso'] = "tá liberado"; 
+        $_SESSION['id'] = $resultado['id'];
     }
 }
 // Se o e-mail e a senha não foram enviados através do formulário de login, redireciona o usuário para a página index.php

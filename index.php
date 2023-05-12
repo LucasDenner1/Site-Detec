@@ -52,6 +52,11 @@
             <p id="vanc">Não possui conta? <a id="ancora" href="cadastro.php">Cadastre-se</a>.</p>
         </form>
     </div>
+
+    <div>
+        
+    </div>
+
 </body>
 
 </html>
