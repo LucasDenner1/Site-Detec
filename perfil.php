@@ -31,12 +31,12 @@ if (empty($_SESSION['intruso'])) {
         <div class="logo">
             <img src="./imagens/LOGO.png" alt="">
         </div>
-       
+
     </nav>
 
     <div id="addPubli" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> <!-- Div de adicionar algo  // iago -->
-    <img id="mais" src="./imagens/maism.png">
-  </div>
+        <img id="mais" src="./imagens/maism.png">
+    </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -69,16 +69,22 @@ if (empty($_SESSION['intruso'])) {
     </div>
 
     <?php
-    $sql = "SELECT * FROM publi ORDER BY hora DESC";
+    $id_usPubli = $_SESSION['id'];
+    $sql = "SELECT * FROM publi WHERE id_usPubli = '$id_usPubli' ORDER BY hora DESC";
     $procura = mysqli_query($conn, $sql);
 
-    while ($achou = mysqli_fetch_assoc($procura)) {
-        echo '<div id="addPublis">';
-        echo  $achou['titulo'] . "<br>";
-        echo  $achou['texto'] . "<br>";
-        echo  $achou['hora'] . "<br>";
-        echo "<br>";
-        echo '</div>';
+    if ($procura) {
+        while ($achou = mysqli_fetch_assoc($procura)) {
+            echo '<div id="addPublis">';
+            echo $achou['titulo'] . "<br>";
+            echo $achou['texto'] . "<br>";
+            echo $achou['hora'] . "<br>";
+            echo " <a href='deletar.php'>delete<a/> ";
+            echo "<br>";
+            echo '</div>';
+        }
+    } else {
+        echo "Erro na consulta SQL: " . mysqli_error($conn);
     }
     ?>
 
