@@ -79,4 +79,22 @@
   justify-content: center;
   padding: 40px;
   border-radius: 13px;
+  margin: 0 auto; /*Centralização de DIV*/
+}
+
+.introducao{
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.containerPubli{
+  background-color: #5E5E5E;
+  width: 43%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 13px;
+  margin: 29px auto; /*Centralização de DIV*/
 }

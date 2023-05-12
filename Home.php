@@ -13,7 +13,7 @@ if (empty($_SESSION['intruso'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forum</title>
-  <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="Home.css">
 
 </head>
 
@@ -24,15 +24,16 @@ if (empty($_SESSION['intruso'])) {
         <img src="./imagens/LOGO.png" alt="">
       </div>
       <div class="usuario" onclick="abrirMenu()">
-        <img src="../detec/imagens/usuario-p.png" alt="">
+        <img src="./imagens/usuario-p.png" alt="">
         <div id="menu" class="menuUser">
           <a href="perfil.php">Perfil</a>
           <a href="logout.php">Sair</a>
         </div>
       </div>
     </nav>
-  <div>
-    <img class="pata" src="../detec/imagens/Pata-dog.png">
+  
+  <div class="introducao">
+    <img class="pata" src="./imagens/Pata-dog.png">
     <h1>Forum</h1>
   </div>
 
@@ -49,11 +50,13 @@ if (empty($_SESSION['intruso'])) {
     }
   </script>
 
-    <div id="addPubli"class="containerPubli"> <!-- Div de adicionar algo  // iago -->
-      <img id="mais"src="./imagens/maism.png">
+    <div id="addPubli" class="containerPubli"> <!-- Div de adicionar algo  // iago -->
+      <img id="mais" src="imagens/mais.png">
     </div>
-
+  
   <!-- Esse é o código que você terá que meter o pau -->
+<div class="containerPubli">
+
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -79,11 +82,11 @@ if (empty($_SESSION['intruso'])) {
             <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
         </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 </body>
 
 </html>
