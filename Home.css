@@ -116,3 +116,17 @@
   width: 30%;
   text-align: center;
 }
+
+.background-image {
+  background-color: #6C6A6A;
+  background-image: url(./imagens/PLANO\ DE\ FUNDO.png);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  /* adiciona posição absoluta para posicionar a div da imagem em relação ao body */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
