@@ -15,14 +15,10 @@ if (empty($_SESSION['intruso'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forum</title>
   <link rel="stylesheet" href="Home.css">
-<<<<<<< HEAD
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-=======
-
->>>>>>> 0b54cf5b12262443a8f0666eb30d4b018e743503
 </head>
 
 <body>
@@ -60,18 +56,9 @@ if (empty($_SESSION['intruso'])) {
     }
   </script>
 
-<<<<<<< HEAD
   <div id="addPubli" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"> <!-- Div de adicionar algo  // iago -->
     <img id="mais" src="./imagens/maism.png">
   </div>
-=======
-    <div id="addPubli" class="containerPubli"> <!-- Div de adicionar algo  // iago -->
-      <img id="mais" src="imagens/mais.png">
-    </div>
-  
-  <!-- Esse é o código que você terá que meter o pau -->
-<div class="containerPubli">
->>>>>>> 0b54cf5b12262443a8f0666eb30d4b018e743503
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
