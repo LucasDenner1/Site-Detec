@@ -19,18 +19,18 @@ if (empty($_SESSION['intruso'])) {
 
 <body>
   <div class="background-image"></div>
-  <nav class="container">
-    <div class="logo">
-      <img src="../detec/imagens/Logo.png" alt="">
-    </div>
-    <div class="usuario" onclick="abrirMenu()">
-      <img src="../detec/imagens/usuario-p.png" alt="">
-      <div id="menu" class="menuUser">
-        <a href="perfil.php">Perfil</a>
-        <a href="logout.php">Sair</a>
+    <nav class="container">
+      <div class="logo">
+        <img src="./imagens/LOGO.png" alt="">
       </div>
-    </div>
-  </nav>
+      <div class="usuario" onclick="abrirMenu()">
+        <img src="../detec/imagens/usuario-p.png" alt="">
+        <div id="menu" class="menuUser">
+          <a href="perfil.php">Perfil</a>
+          <a href="logout.php">Sair</a>
+        </div>
+      </div>
+    </nav>
   <div>
     <img class="pata" src="../detec/imagens/Pata-dog.png">
     <h1>Forum</h1>
