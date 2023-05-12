@@ -7,9 +7,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dataHora = $_POST['data_hora'];
     $id_usPubli = $_SESSION['id']; 
     
-    $titulo = $_SESSION["titulo"];
-    $texto = $_SESSION["texto"];
-    $dataHora = $_SESIION['data_hora'];
+     $_SESSION["titulo"] = $titulo ;
+     $_SESSION["texto"] = $texto ;
+     $_SESSION['data_hora'] = $dataHora ;
 
     // Sanitização dos campos (exemplo: uso de prepared statements é altamente recomendado)
     $titulo = mysqli_real_escape_string($conn, $titulo);
