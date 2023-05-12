@@ -98,12 +98,10 @@ if (empty($_SESSION['intruso'])) {
     echo '<div id="addPublis">';
     echo  $achou['titulo'] . "<br>";
     echo  $achou['texto'] . "<br>";
-    echo  $achou['texto'] . "<br>";
+    echo  $achou['hora'] . "<br>";
     echo "<br>";
     echo '</div>';
    }
 ?>
-
 </body>
-
 </html>
