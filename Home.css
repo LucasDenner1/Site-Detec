@@ -1,3 +1,11 @@
+body {
+  font-family: 'Inter Regular', sans-serif;
+  color: #fff;
+  background-color: #6C6A6A;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -97,4 +105,18 @@
   padding: 40px;
   border-radius: 13px;
   margin: 29px auto; /*Centralização de DIV*/
+}
+
+.background-image {
+  background-image: url(./imagens/PLANO\ DE\ FUNDO.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  /* adiciona posição absoluta para posicionar a div da imagem em relação ao body */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  /* adiciona um z-index negativo para garantir que a div fique atrás do container */
 }

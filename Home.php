@@ -18,6 +18,8 @@ if (empty($_SESSION['intruso'])) {
 </head>
 
 <body>
+<div class="background-image"></div> <!--Background-->
+
   <div class="background-image"></div>
     <nav class="container">
       <div class="logo">
