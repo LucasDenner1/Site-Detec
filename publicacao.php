@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $texto = $_POST["texto"];
     $dataHora = $_POST['data_hora'];
     $id_usPubli = $_SESSION['id']; 
-    
-    $titulo = $_SESSION["titulo"];
-    $texto = $_SESSION["texto"];
-    $dataHora = $_SESIION['data_hora'];
+
+    $_SESSION["clone_titulo"] = $titulo;
+    $_SESSION["clone_texto"] = $texto;
+    $_SESSION['clone_data_hora'] = $dataHora;
 
     // Sanitização dos campos (exemplo: uso de prepared statements é altamente recomendado)
     $titulo = mysqli_real_escape_string($conn, $titulo);
