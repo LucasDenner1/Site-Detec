@@ -1,6 +1,7 @@
 <?php
 include_once 'conector.php'; 
 session_start(); 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titulo = $_POST["titulo"];
     $texto = $_POST["texto"];
@@ -19,10 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO publi (titulo, texto, hora, id_usPubli) VALUES ('$titulo','$texto','$dataHora','$id_usPubli')";
 
     if ($conn->query($sql) === TRUE) {   
-        if($_SESSION["PagOrig"] == "Home") {
+        if($_SESSION["PagOrig"] == "Adm") {
+            header("Location: Adm.php");
+        }
+        else if($_SESSION["PagOrig"] == "Home") {
             header("Location: Home.php");
         }
-        if($_SESSION["PagOrig"] == "Perfil") {
+        else if($_SESSION["PagOrig"] == "Perfil") {
             header("Location: perfil.php");
         }else{
             echo "tu veio de onde?";
@@ -32,4 +36,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erro ao cadastrar: " . $conn->error;
     }
 }
-?>

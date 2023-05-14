@@ -40,7 +40,6 @@ date_default_timezone_set('America/Sao_Paulo');
 
     <div class="background-image"></div> <!--Background-->
 
-    <div class="background-image"></div>
     <nav class="container">
         <div class="logo">
             <img src="./imagens/LOGO.png" alt="">
@@ -132,7 +131,7 @@ date_default_timezone_set('America/Sao_Paulo');
             <!-- linha [1] é o texto no banco de dados -->
             <p><?php echo $linha["1"] ?></p>
             <!-- linha [2] é o hora no banco de dados -->
-            <p><?php echo $linha["2"] ?></p>
+            <p><?php echo date('d-m-Y', strtotime($linha["2"])) ?></p>
 
             <form method="post" action="deletar.php">
                 <input name="idP" type="hidden" value="<?php echo $linha[3]; ?>">

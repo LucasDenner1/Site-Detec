@@ -2,9 +2,9 @@
 include_once 'conector.php';
 session_start();
 if (empty($_SESSION['adm'])) {
-    print "<script>location.href= 'Home.php';</script>";
+    print "<script>location.href= 'erro404.php';</script>";
 }
-$_SESSION["PagOrig"] = "Home";
+$_SESSION["PagOrig"] = "Adm";
 date_default_timezone_set('America/Sao_Paulo');
 ?>
 
@@ -32,6 +32,7 @@ date_default_timezone_set('America/Sao_Paulo');
         .btn-primary {
             border-color: transparent;
         }
+        
     </style>
 </head>
 
@@ -127,7 +128,7 @@ date_default_timezone_set('America/Sao_Paulo');
             <!-- linha [1] é o texto no banco de dados -->
             <p><?php echo $linha["1"] ?></p>
             <!-- linha [2] é o hora no banco de dados -->
-            <p><?php echo $linha["2"] ?></p>
+            <p><?php echo date('d-m-Y', strtotime($linha["2"])) ?></p>
 
             <form method="post" action="deletar.php">
                 <input name="idP" type="hidden" value="<?php echo $linha[3]; ?>">

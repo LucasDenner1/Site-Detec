@@ -124,3 +124,15 @@
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+
+.Choro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+.Choro .content {
+  text-align: center; 
+  color:rgb(255, 255, 255);
+  font-weight: 'inter';
+}

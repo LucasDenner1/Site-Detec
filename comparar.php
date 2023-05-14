@@ -1,6 +1,5 @@
 <?php
-session_start(); // Inicia a sessão
-
+session_start();
 include_once 'conector.php';
 
 // Verifica se o e-mail e a senha foram enviados através do formulário de login

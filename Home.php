@@ -126,7 +126,7 @@ date_default_timezone_set('America/Sao_Paulo');
       <!-- linha [1] é o texto no banco de dados -->
       <p><?php echo $linha["1"] ?></p>
       <!-- linha [2] é o hora no banco de dados -->
-      <p><?php echo date('Y-m-d', strtotime($linha["2"])) ?></p>
+      <p><?php echo date('d-m-Y', strtotime($linha["2"])) ?></p>
     </div>
   <?php
   }
