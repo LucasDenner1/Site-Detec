@@ -101,6 +101,7 @@
 }
 
 #addPublis{
+  color: white;
   background-color: #5e5e5e;
   width: 43%;
   display: flex;
@@ -115,4 +116,9 @@
   margin: 0 auto;
   width: 30%;
   text-align: center;
+}
+
+.botaoDelete{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }

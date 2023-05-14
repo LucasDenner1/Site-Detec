@@ -21,7 +21,7 @@ body {
 }
 
 .background-image {
-  background-image: url(../detec/imagens/PLANO\ DE\ FUNDO.png);
+  background-image: url(./imagens/PLANO\ DE\ FUNDO.png);
   background-size: cover;
   background-position: center;
   position: absolute;

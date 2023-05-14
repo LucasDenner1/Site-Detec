@@ -24,7 +24,6 @@ date_default_timezone_set('America/Sao_Paulo');
 </head>
 
 <body>
-  <div class="background-image"></div> <!--Background-->
 
   <div class="background-image"></div>
   <nav class="container">
