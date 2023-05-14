@@ -8,7 +8,7 @@
   background-image: url(../detec/imagens/PLANO\ DE\ FUNDO.png);
   background-size: cover; 
   background-position: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;

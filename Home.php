@@ -4,6 +4,8 @@ session_start();
 if (empty($_SESSION['intruso'])) {
   print "<script>location.href= 'index.php';</script>";
 }
+$_SESSION["PagOrig"] = "Home";
+date_default_timezone_set('America/Sao_Paulo');
 ?>
 
 <!DOCTYPE html>
@@ -38,11 +40,6 @@ if (empty($_SESSION['intruso'])) {
     </div>
   </nav>
 
-  <div class="introducao">
-    <img class="pata" src="./imagens/Pata-dog.png">
-    <h1>PET Forum</h1>
-  </div>
-
   <script>
     function abrirMenu() {
       const menu = document.getElementById("menu")
@@ -55,6 +52,12 @@ if (empty($_SESSION['intruso'])) {
       }
     }
   </script>
+
+  <div class="introducao">
+    <img class="pata" src="./imagens/Pata-dog.png">
+    <h1>PET Forum</h1>
+  </div>
+
 
   <div id="addPubli" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
     <img id="mais" src="./imagens/maism.png">
@@ -93,15 +96,24 @@ if (empty($_SESSION['intruso'])) {
   <?php
   $sql = "SELECT * FROM publi ORDER BY hora DESC";
   $procura = mysqli_query($conn, $sql);
+  $linhas = mysqli_fetch_all($procura);
 
-  while ($achou = mysqli_fetch_assoc($procura)) {
-    echo '<div id="addPublis">';
-    echo  $achou['titulo'] . "<br>";
-    echo  $achou['texto'] . "<br>";
-    echo  $achou['hora'] . "<br>";
-    echo '</div>';
-  }
-  ?>
+  foreach ($linhas as $linha) {
+
+    //echo "<div>" . $linha["0"] . $linha["1"] . $linha["2"] ."/<div>";
+    ?>
+    <div id="addPublis">
+        <!-- linha [0] é o titulo no banco de dados -->
+        <p><?php echo $linha["0"] ?></p>
+        <!-- linha [1] é o texto no banco de dados -->
+        <p><?php echo $linha["1"] ?></p>
+          <!-- linha [2] é o hora no banco de dados -->
+        <p><?php echo $linha["2"] ?></p>
+    </div>
+    <?php
+}
+?>
+
 </body>
 
 </html>

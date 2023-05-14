@@ -4,6 +4,8 @@ session_start();
 if (empty($_SESSION['intruso'])) {
     print "<script>location.href= 'index.php';</script>";
 }
+$_SESSION["PagOrig"] = "Perfil";
+date_default_timezone_set('America/Sao_Paulo');
 ?>
 
 <!DOCTYPE html>
@@ -72,21 +74,29 @@ if (empty($_SESSION['intruso'])) {
     $id_usPubli = $_SESSION['id'];
     $sql = "SELECT * FROM publi WHERE id_usPubli = '$id_usPubli' ORDER BY hora DESC";
     $procura = mysqli_query($conn, $sql);
+  
+    $linhas = mysqli_fetch_all($procura);
 
-    if ($procura) {
-        while ($achou = mysqli_fetch_assoc($procura)) {
-            echo '<div id="addPublis">';
-            echo $achou['titulo'] . "<br>";
-            echo $achou['texto'] . "<br>";
-            echo $achou['hora'] . "<br>";
-            echo " <a href='deletar.php'>delete<a/> ";
-            echo "<br>";
-            echo '</div>';
+        foreach ($linhas as $linha) {
+
+            //echo "<div>" . $linha["0"] . $linha["1"] . $linha["2"] ."/<div>";
+            ?>
+            <div id="addPublis">
+                <!-- linha [0] é o titulo no banco de dados -->
+                <p><?php echo $linha["0"] ?></p>
+                <!-- linha [1] é o texto no banco de dados -->
+                <p><?php echo $linha["1"] ?></p>
+                  <!-- linha [2] é o hora no banco de dados -->
+                <p><?php echo $linha["2"] ?></p>
+        
+                <form method="post" action="deletar.php">
+                    <input name="idP" type="hidden" value="<?php echo $linha[3];?>">
+                    <input type="submit" value="Deletar">
+                </form>
+            </div>
+            <?php
         }
-    } else {
-        echo "Erro na consulta SQL: " . mysqli_error($conn);
-    }
-    ?>
+   ?>
 
 </body>
 

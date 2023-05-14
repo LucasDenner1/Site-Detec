@@ -2,15 +2,16 @@
 include_once 'conector.php';
 session_start();
 
-$id_usPubli = $_SESSION['id'];
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
-$sql = "DELETE FROM publi WHERE id_usPubli = $id_usPubli ";
+    $id_Publi = $_POST['idP'];
 
-
-if (mysqli_query($conn, $sql)) {
-    header("Location: Home.php");
-} else {
-    echo "Erro ao apagar o dado: " . mysqli_error($conn);
+    $sql = "DELETE FROM publi WHERE id_Publi = '$id_Publi' ";
+    
+    if ($conn->query($sql) === TRUE){
+        header("Location: perfil.php");
+    } else {
+        echo "Erro ao apagar o dado: " . mysqli_error($conn);
+    }
 }
-
 ?>

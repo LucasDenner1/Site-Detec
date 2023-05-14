@@ -18,8 +18,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO publi (titulo, texto, hora, id_usPubli) VALUES ('$titulo','$texto','$dataHora','$id_usPubli')";
 
-    if ($conn->query($sql) === TRUE) {    
-        header("Location: Home.php");
+    if ($conn->query($sql) === TRUE) {   
+        if($_SESSION["PagOrig"] == "Home") {
+            header("Location: Home.php");
+        }
+        if($_SESSION["PagOrig"] == "Perfil") {
+            header("Location: perfil.php");
+        }else{
+            echo "tu veio de onde?";
+        }
     } else {
         // Se a query não foi executada com sucesso, exibe uma mensagem de erro.
         echo "Erro ao cadastrar: " . $conn->error;
