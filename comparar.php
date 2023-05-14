@@ -20,16 +20,22 @@ if ((isset($_POST['email'])) && (isset($_POST['senha']))) {
     // Obtém o resultado da query SQL
     $resultado = mysqli_fetch_assoc($result);
 
+    $_SESSION['adm'] = $resultado['Adm'];
+    echo $_SESSION['adm'];
     // Verifica se a query SQL retornou algum resultado
-    if (empty($resultado)) {
+    // Se a query SQL retornou algum resultado, redireciona o usuário para a página de administrativo.php
+    if(!empty($_SESSION['adm'])){
+        $_SESSION['intruso'] = "tá liberado";
+        $_SESSION['id'] = $resultado['id'];
+        header("Location: Adm.php");
+    }
+    else if(!empty($resultado)) {
+        header("Location: Home.php");
+        $_SESSION['intruso'] = "tá liberado";
+        $_SESSION['id'] = $resultado['id'];
+    } else {
         $_SESSION['loginErro'] = "Usuário ou senha inválidos";
         header("Location: index.php");
-    }
-    // Se a query SQL retornou algum resultado, redireciona o usuário para a página de administrativo.php
-    else if (!empty($resultado)) {
-        header("Location: Home.php");
-        $_SESSION['intruso'] = "tá liberado"; 
-        $_SESSION['id'] = $resultado['id'];
     }
 }
 // Se o e-mail e a senha não foram enviados através do formulário de login, redireciona o usuário para a página index.php

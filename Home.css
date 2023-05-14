@@ -30,20 +30,21 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  justify-content: center;
 }
 
 .menuUser {
   display: none;
   position: absolute;
-  right: 0;
-  top: 40px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.usuario:hover .menuUser {
-  display: block;
+  top: 6px;
+  background-color: #5e5e5e;
+  border: #5e5e5e;
+  width: 4%;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 55px;
 }
 
 .input-container {
@@ -51,7 +52,7 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #5E5E5E;
   border: 1px solid #ccc;
   cursor: pointer;
 }
@@ -88,7 +89,6 @@
   padding: 20px;
 }
 
-
 #addPubli {
   background-color: rgba(94, 94, 94, 0.38);
   width: 43%;
@@ -98,6 +98,7 @@
   padding: 40px;
   border-radius: 13px;
   margin: 10px auto;
+  margin-top: 30px;
 }
 
 #addPublis{
@@ -107,9 +108,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
   border-radius: 13px;
-  margin: 29px auto;
+  margin: 15px auto;
+  flex-direction: column;
 }
 
 .introducao{

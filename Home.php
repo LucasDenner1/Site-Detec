@@ -21,6 +21,18 @@ date_default_timezone_set('America/Sao_Paulo');
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <style>
+    .btn-primary:hover {
+
+      border-color: transparent;
+
+    }
+
+    .btn-primary {
+      border-color: transparent;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,8 +45,15 @@ date_default_timezone_set('America/Sao_Paulo');
     <div class="usuario" onclick="abrirMenu()">
       <img src="./imagens/usuario-p.png" alt="">
       <div id="menu" class="menuUser">
-        <a href="perfil.php">Perfil</a>
-        <a href="logout.php">Sair</a>
+        <?php
+        if (!empty($_SESSION['adm'])) {
+        ?>
+          <a style="color:#FFFFFF" href="Adm.php">Adm</a>
+        <?php
+        }
+        ?>
+        <a style="color:#FFFFFF" href="perfil.php">Perfil</a>
+        <a style="color:#FFFFFF" href="logout.php">Sair</a>
       </div>
     </div>
   </nav>
@@ -42,7 +61,7 @@ date_default_timezone_set('America/Sao_Paulo');
   <script>
     function abrirMenu() {
       const menu = document.getElementById("menu")
-      aberto = window.getComputedStyle(menu).getPropertyValue("display")
+      let aberto = window.getComputedStyle(menu).getPropertyValue("display")
       if (aberto == "none") {
         menu.style.display = "flex"
 
@@ -53,7 +72,7 @@ date_default_timezone_set('America/Sao_Paulo');
   </script>
 
   <div class="introducao">
-    <img class="pata" src="./imagens/Pata-dog.png">
+    <img class="pata" src="./imagens/patazinha.png">
     <h1>PET Forum</h1>
   </div>
 
@@ -100,18 +119,18 @@ date_default_timezone_set('America/Sao_Paulo');
   foreach ($linhas as $linha) {
 
     //echo "<div>" . $linha["0"] . $linha["1"] . $linha["2"] ."/<div>";
-    ?>
+  ?>
     <div id="addPublis">
-        <!-- linha [0] é o titulo no banco de dados -->
-        <p><?php echo $linha["0"] ?></p>
-        <!-- linha [1] é o texto no banco de dados -->
-        <p><?php echo $linha["1"] ?></p>
-          <!-- linha [2] é o hora no banco de dados -->
-        <p><?php echo $linha["2"] ?></p>
+      <!-- linha [0] é o titulo no banco de dados -->
+      <p><?php echo $linha["0"] ?></p>
+      <!-- linha [1] é o texto no banco de dados -->
+      <p><?php echo $linha["1"] ?></p>
+      <!-- linha [2] é o hora no banco de dados -->
+      <p><?php echo date('Y-m-d', strtotime($linha["2"])) ?></p>
     </div>
-    <?php
-}
-?>
+  <?php
+  }
+  ?>
 
 </body>
 
