@@ -50,6 +50,7 @@ date_default_timezone_set('America/Sao_Paulo');
                 if (!empty($_SESSION['adm'])) {
                 ?>
                     <a style="color:#FFFFFF" href="Home.php">Home</a>
+                    <a style="color:#FFFFFF" href="dados.php">Dados</a>
                 <?php
                 }
                 ?>
@@ -112,7 +113,6 @@ date_default_timezone_set('America/Sao_Paulo');
     </div>
 
     <?php
-    $id_usPubli = $_SESSION['id'];
     $sql = "SELECT * FROM publi ORDER BY hora DESC";
     $procura = mysqli_query($conn, $sql);
 

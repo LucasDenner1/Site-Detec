@@ -51,6 +51,7 @@ date_default_timezone_set('America/Sao_Paulo');
                 if (!empty($_SESSION['adm'])) {
                 ?>
                     <a style="color:#FFFFFF" href="Adm.php">Adm</a>
+                    <a style="color:#FFFFFF" href="dados.php">Dados</a>
                 <?php
                 }
                 ?>

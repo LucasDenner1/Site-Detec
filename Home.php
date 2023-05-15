@@ -49,6 +49,7 @@ date_default_timezone_set('America/Sao_Paulo');
         if (!empty($_SESSION['adm'])) {
         ?>
           <a style="color:#FFFFFF" href="Adm.php">Adm</a>
+          <a style="color:#FFFFFF" href="dados.php">Dados</a>
         <?php
         }
         ?>
@@ -117,8 +118,6 @@ date_default_timezone_set('America/Sao_Paulo');
   $linhas = mysqli_fetch_all($procura);
 
   foreach ($linhas as $linha) {
-
-    //echo "<div>" . $linha["0"] . $linha["1"] . $linha["2"] ."/<div>";
   ?>
     <div id="addPublis">
       <!-- linha [0] é o titulo no banco de dados -->

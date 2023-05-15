@@ -26,6 +26,7 @@ if ((isset($_POST['email'])) && (isset($_POST['senha']))) {
     if(!empty($_SESSION['adm'])){
         $_SESSION['intruso'] = "tá liberado";
         $_SESSION['id'] = $resultado['id'];
+        $_SESSION['on'] +=  1;
         header("Location: Adm.php");
     }
     else if(!empty($resultado)) {
