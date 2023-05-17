@@ -11,6 +11,7 @@
 <?php
 session_start();
 ?>
+
 <body>
     <div class="background-image"></div>
     <img class="logo" src="imagens/Logo.png">
@@ -18,14 +19,20 @@ session_start();
         <form id="cadastro-form" method="post" action="inserir.php">
             <h1 id="titulo">CADASTRAR</h1>
             <input type="text" id="nome" name="nome" class="input" placeholder="NOME" value="<?php
-                                                                                                if (!empty($_SESSION["nomeclone"])) {
+                                                                                                if (!empty($_SESSION["jatem"])) {
+                                                                                                    echo "";
+                                                                                                    unset($_SESSION["nomeclone"]);
+                                                                                                } else if (!empty($_SESSION["nomeclone"])) {
                                                                                                     echo $_SESSION["nomeclone"];
                                                                                                     $_SESSION["nomeclone"] = "";
                                                                                                 }
                                                                                                 ?>" required>
 
             <input type="email" id="email" name="email" class="input" placeholder="EMAIL" value="<?php
-                                                                                                    if (!empty($_SESSION["emailclone"])) {
+                                                                                                    if (!empty($_SESSION["jatem"])) {
+                                                                                                        echo "";
+                                                                                                        unset($_SESSION["emailclone"]);
+                                                                                                    } else if (!empty($_SESSION["emailclone"])) {
                                                                                                         echo $_SESSION["emailclone"];
                                                                                                         $_SESSION["emailclone"] = "";
                                                                                                     }
@@ -35,8 +42,12 @@ session_start();
             <input type="password" id="confirmarsenha" name="confirmarsenha" class="input" placeholder="CONFIRMAR SENHA" required>
             <?php
 
+            if (isset($_SESSION["jatem"])) {
+                echo "<div><spam class='error'>" . "*" . $_SESSION["jatem"] . "</spam></div>";
+                unset($_SESSION["jatem"]);
+            }
             if (isset($_SESSION["Conflito"])) {
-                echo "<div><spam class='error'>" . $_SESSION["Conflito"] . "</spam></div>";
+                echo "<div><spam class='error'>" . "*" . $_SESSION["Conflito"] . "</spam></div>";
                 unset($_SESSION["Conflito"]);
             }
 

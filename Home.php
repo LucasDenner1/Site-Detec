@@ -36,6 +36,16 @@ date_default_timezone_set('America/Sao_Paulo');
 </head>
 
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+    setInterval(function() {
+      $.post("processavis.php", {
+        contar: '',
+      }, function(data) {
+        $('#online').text(data);
+      })
+    }, 10000);
+  </script>
 
   <div class="background-image"></div>
   <nav class="container">

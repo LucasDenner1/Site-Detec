@@ -22,6 +22,32 @@ date_default_timezone_set('America/Sao_Paulo');
 
 <body>
 
+    <?php
+    $id_us = $_SESSION['id'];
+    // obtenho a data atual
+    $data['atual'] = date('Y-m-d H:i:s');
+
+    //diminuir 20 sec
+    $data['online'] = strtotime($data['atual'] . "-1 minutes");
+    $data['online'] = date("Y-m-d H:i:s", $data['online']);
+
+    $result_qnt_visitas = "SELECT COUNT(id) as online FROM visitas WHERE data_final >= '" . $data['online'] . "'";
+    $resultado_qnt_visitas = mysqli_query($conn, $result_qnt_visitas);
+
+    $row_qnt_visitas = mysqli_fetch_assoc($resultado_qnt_visitas);
+    ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        setInterval(function() {
+            $.post("processavis.php", {
+                contar: '',
+            }, function(data) {
+                $('#online').text(data);
+            })
+        }, 40000);
+    </script>
+
     <div class="background-image"></div>
     <nav class="container">
         <div class="logo">
@@ -59,8 +85,8 @@ date_default_timezone_set('America/Sao_Paulo');
 
     <div class="introducao">
         <img class="pata" src="./imagens/dados.png">
-        <div id= "addPublis">
-        <h2>Usuarios online: <?php echo $_SESSION['on'] ?></h1>
+        <div id="addPublis">
+            <h2>Quantidade de usuarios online: <span id='online'>0</span></h2>
         </div>
     </div>
 
