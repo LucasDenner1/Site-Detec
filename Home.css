@@ -116,9 +116,10 @@
 }
 
 .introducao{
-  margin: 0 auto;
+  margin: 10px auto;
   width: 30%;
   text-align: center;
+  color: white;
 }
 
 .botaoDelete{
