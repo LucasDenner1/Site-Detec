@@ -44,7 +44,7 @@ date_default_timezone_set('America/Sao_Paulo');
             }, function(data) {
                 $('#online').text(data);
             })
-        }, 10000);
+        }, 5000);
     </script>
     <div class="background-image"></div>
     <nav class="container">
