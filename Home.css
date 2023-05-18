@@ -112,6 +112,7 @@
   border-radius: 13px;
   margin: 15px auto;
   flex-direction: column;
+  word-break: break-all;
 }
 
 .introducao{
