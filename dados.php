@@ -28,7 +28,7 @@ date_default_timezone_set('America/Sao_Paulo');
     $data['atual'] = date('Y-m-d H:i:s');
 
     //diminuir 20 sec
-    $data['online'] = strtotime($data['atual'] . "-1 minutes");
+    $data['online'] = strtotime($data['atual'] . "-20 seconds");
     $data['online'] = date("Y-m-d H:i:s", $data['online']);
 
     $result_qnt_visitas = "SELECT COUNT(id) as online FROM visitas WHERE data_final >= '" . $data['online'] . "'";
@@ -45,7 +45,7 @@ date_default_timezone_set('America/Sao_Paulo');
             }, function(data) {
                 $('#online').text(data);
             })
-        }, 40000);
+        }, 5000);
     </script>
 
     <div class="background-image"></div>
