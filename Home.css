@@ -136,3 +136,25 @@
   color:rgb(255, 255, 255);
   font-weight: 'inter';
 }
+
+.modal-content{
+  border-radius: 50px;
+}
+
+.modal-header{
+  background-color: #6C6A6A;
+  color: white;
+  border-radiu: 30px;
+}
+
+.modal-header .modal-title{
+  margin-left: 37%;
+}
+
+.modal-header span{
+  color:white;
+}
+
+.modal-body{
+  background-color: #6C6A6A;
+}

@@ -16,8 +16,9 @@ date_default_timezone_set('America/Sao_Paulo');
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forum</title>
-  <link rel="stylesheet" href="./home.css">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./home.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -94,22 +95,22 @@ date_default_timezone_set('America/Sao_Paulo');
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" class="corpoModal">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Publicação</h5>
+          <h5 class="modal-title" id="exampleModalLabel">PUBLICAÇÃO</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times;</span> <!--&times=CLose-->
           </button>
         </div>
         <div class="modal-body">
           <form id="modalForm" method="post" action="publicacao.php">
             <div class="form-group">
-              <label for="recipient-name" class="col-form-label">TITULO:</label>
-              <input name="titulo" type="text" class="form-control" id="recipient-name">
+              <label for="recipient-name" class="col-form-label">TÍTULO:</label>
+              <input name="titulo" type="text" class="form-control" id="recipient-name" placeholder="Digite o título">
             </div>
             <div class="form-group">
               <label for="message-text" class="col-form-label">TEXTO:</label>
-              <textarea name="texto" class="form-control" id="message-text"></textarea>
+              <textarea name="texto" class="form-control" id="message-text" placeholder="O que você está pensando?"></textarea>
             </div>
             <input type="hidden" name="data_hora" value="<?php echo date('Y-m-d H:i:s'); ?>">
             <div class="modal-footer">
