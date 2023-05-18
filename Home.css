@@ -116,10 +116,15 @@
 }
 
 .introducao{
-  margin: 10px auto;
+  padding: 10px;
+  margin: 50px auto;
   width: 30%;
   text-align: center;
   color: white;
+}
+
+.introducao h1{
+  margin: 10px;
 }
 
 .botaoDelete{
@@ -165,4 +170,14 @@
 
 .modal-body .form-group #message-text{
   resize: none;
+}
+
+.input-with-image{
+  background-image: url(./imagens/LIXEIRA.png);
+  background-size: cover;
+  border: none;
+  width: 30px;
+  height: 29px;
+  border-radius: 60%;
+  margin-left: 35vw;
 }
