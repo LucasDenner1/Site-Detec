@@ -173,6 +173,7 @@
 }
 
 .input-with-image{
+  background-color: #FF0000;
   background-image: url(./imagens/LIXEIRA.png);
   background-size: cover;
   border: none;
