@@ -137,14 +137,9 @@
   font-weight: 'inter';
 }
 
-.modal-content{
-  border-radius: 50px;
-}
-
 .modal-header{
   background-color: #6C6A6A;
   color: white;
-  border-radiu: 30px;
 }
 
 .modal-header .modal-title{
@@ -157,4 +152,8 @@
 
 .modal-body{
   background-color: #6C6A6A;
+}
+
+.modal-body .form-group #message-text{
+  resize: none;
 }
