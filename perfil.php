@@ -88,7 +88,9 @@ date_default_timezone_set('America/Sao_Paulo');
     </script>
 
     <div class="introducao">
-        <img class="pata" src="./imagens/usuario.png">
+        <input type="file" class="foto-perfil" name="fotoPerfil" id="fotoPerfil" accept="image/*" style="display: none;">
+        <label for="fotoPerfil" ><img src="./imagens/usuario.png" alt="Foto de Perfil"></label>
+        <!img class="pata" src="./imagens/usuario.png">
         <h1>Suas Publicações</h1>
     </div>
 

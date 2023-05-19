@@ -194,3 +194,8 @@
   background-color: white;
   color: #FF0000;
 }
+
+.foto-perfil{
+  background-image: url(./imagens/usuario.png);
+  
+}
