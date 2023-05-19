@@ -131,6 +131,10 @@ date_default_timezone_set('America/Sao_Paulo');
         //echo "<div>" . $linha["0"] . $linha["1"] . $linha["2"] ."/<div>";
     ?>
         <div id="addPublis">
+        <form method="post" action="deletar.php">
+                <input name="idP" type="hidden" value="<?php echo $linha[3]; ?>">
+                <input type="submit" class="input-with-image" value="">
+            </form>
             <!-- linha [0] é o titulo no banco de dados -->
             <p><?php echo $linha["0"] ?></p>
             <!-- linha [1] é o texto no banco de dados -->
@@ -138,10 +142,7 @@ date_default_timezone_set('America/Sao_Paulo');
             <!-- linha [2] é o hora no banco de dados -->
             <p><?php echo date('d-m-Y', strtotime($linha["2"])) ?></p>
 
-            <form method="post" action="deletar.php">
-                <input name="idP" type="hidden" value="<?php echo $linha[3]; ?>">
-                <input type="submit" value="Deletar">
-            </form>
+            
         </div>
     <?php
     }
