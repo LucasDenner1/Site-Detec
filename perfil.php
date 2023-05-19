@@ -35,7 +35,7 @@ date_default_timezone_set('America/Sao_Paulo');
             border-color: transparent;
         }
     </style>
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./Home.css">
 </head>
 
 <body>

@@ -15,9 +15,9 @@ date_default_timezone_set('America/Sao_Paulo');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum</title>
-    <link rel="stylesheet" href="Home.css">
+    <title>Forum</title>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Home.css">
 </head>
 
 <body>
@@ -85,7 +85,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
     <div class="introducao">
         <img class="pata" src="./imagens/dados.png">
-        <div id="addPublis">
+        <div>
             <h2>Quantidade de usuarios online: <span id='online'>0</span></h2>
         </div>
     </div>
@@ -109,7 +109,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
             <form method="post" action="banido.php">
                 <input name="idU" type="hidden" value="<?php echo $linha[0]; ?>">
-                <input type="submit" value="Banir">
+                <input type="submit" class="banir-botao" value="Banir">
             </form>
         </div>
     <?php

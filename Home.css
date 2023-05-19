@@ -182,3 +182,15 @@
   border-radius: 60%;
   margin-left: 35vw;
 }
+
+.banir-botao{
+  background-color: #FF0000;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.banir-botao:hover{
+  background-color: white;
+  color: #FF0000;
+}
